@@ -4,6 +4,8 @@ import 'package:docapp_pro/featuers/homescreen/ui/widgets/home_container_bainer.
 import 'package:docapp_pro/featuers/homescreen/ui/widgets/home_top_bar.dart';
 import 'package:flutter/material.dart';
 
+import 'widgets/home_doctors_speciality.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
@@ -20,6 +22,8 @@ class HomeScreen extends StatelessWidget {
               const HomeTopBar(),
               virticalspace(16),
               const HomeContainerBiner(),
+              virticalspace(24),
+              const HomeDoctorSpeciality(),
             ],
           ),
         ),
