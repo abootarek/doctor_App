@@ -1,5 +1,6 @@
 import 'package:docapp_pro/core/helper/sixbox.dart';
 import 'package:docapp_pro/core/theming/colors.dart';
+import 'package:docapp_pro/featuers/homescreen/ui/widgets/home_container_bainer.dart';
 import 'package:docapp_pro/featuers/homescreen/ui/widgets/home_top_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -18,7 +19,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               const HomeTopBar(),
               virticalspace(16),
-              // const HomeContainerBiner(),
+              const HomeContainerBiner(),
             ],
           ),
         ),
