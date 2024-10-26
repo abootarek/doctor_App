@@ -1,5 +1,3 @@
-
-
 import 'package:docapp_pro/core/theming/colors.dart';
 import 'package:docapp_pro/core/theming/font_wight_helper.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +8,12 @@ class TextStyles {
   static TextStyle font24Black700Wight = TextStyle(
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.bold,
-    color: Colors.black,
+    color: ColorsApp.black,
+  );
+  static TextStyle font18Black700Wight = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: ColorsApp.black,
   );
 
   static TextStyle font32BblueBold = TextStyle(
@@ -52,5 +55,10 @@ class TextStyles {
     fontSize: 12.sp,
     fontWeight: FontWeightHelper.normal,
     color: ColorsApp.mainblack,
+  );
+  static TextStyle font12grey = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.normal,
+    color: ColorsApp.gray,
   );
 }
