@@ -15,6 +15,11 @@ class TextStyles {
     fontWeight: FontWeightHelper.bold,
     color: ColorsApp.black,
   );
+  static TextStyle font18whitemedium = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: ColorsApp.white,
+  );
 
   static TextStyle font32BblueBold = TextStyle(
     fontSize: 32.sp,
