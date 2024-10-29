@@ -25,10 +25,20 @@ class HomeTopBar extends StatelessWidget {
         CircleAvatar(
           radius: 20,
           backgroundColor: ColorsApp.morelightergray,
-          child: Icon(
-            Icons.notifications_none,
-            color: ColorsApp.black,
+          child: IconButton(
+            onPressed: () {},
+            icon: Badge.count(
+              count: 1,
+              child: Icon(
+                Icons.notifications_none,
+                color: ColorsApp.black,
+              ),
+            ),
           ),
+          // child: Icon(
+          //   Icons.notifications_none,
+          //   color: ColorsApp.black,
+          // ),
         )
       ],
     );
