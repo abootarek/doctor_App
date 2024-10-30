@@ -1,5 +1,6 @@
 import 'package:docapp_pro/core/di/dependancy_ingection.dart';
 import 'package:docapp_pro/core/routing/routs.dart';
+import 'package:docapp_pro/featuers/homescreen/logic/cubit/home_specializitions_cubit.dart';
 import 'package:docapp_pro/featuers/homescreen/ui/homescreen.dart';
 import 'package:docapp_pro/featuers/loginscreen/logic/cubit/login_cubit.dart';
 import 'package:docapp_pro/featuers/loginscreen/ui/logins_screen.dart';
@@ -21,7 +22,7 @@ class AppRouter {
       case Routes.loginscreen:
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
-            create: (context) => getIt<LoginCubit>(),
+            create: (context) => LoginCubit(getIt()),
             child: const LoginScreen(),
           ),
         );
@@ -29,7 +30,7 @@ class AppRouter {
       case Routes.signupscreen:
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
-            create: (context) => getIt<SignupCubit>(),
+            create: (context) => SignupCubit(getIt()),
             child: const SignUpScreen(),
           ),
         );
@@ -37,7 +38,7 @@ class AppRouter {
       case Routes.homescreen:
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
-            create: (context) => getIt<LoginCubit>(),
+            create: (context) => HomeSpecializitionsCubit(getIt()),
             child: const HomeScreen(),
           ),
         );

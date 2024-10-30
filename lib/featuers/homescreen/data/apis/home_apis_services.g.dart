@@ -24,7 +24,7 @@ class _HomeApisServices implements HomeApisServices {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<SpecializitionsResponseModel> getHomeData() async {
+  Future<SpecializitionsResponseModel> getSpecializitions() async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
