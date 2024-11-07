@@ -1,5 +1,3 @@
-import 'package:docapp_pro/core/helper/extintion.dart';
-import 'package:docapp_pro/core/routing/routs.dart';
 import 'package:docapp_pro/core/theming/style.dart';
 import 'package:flutter/material.dart';
 
