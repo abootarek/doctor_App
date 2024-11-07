@@ -2,9 +2,7 @@ import 'package:docapp_pro/core/helper/app_regex.dart';
 import 'package:docapp_pro/core/helper/sixbox.dart';
 import 'package:docapp_pro/core/widget/app_text_form_field.dart';
 import 'package:docapp_pro/featuers/loginscreen/logic/cubit/login_cubit.dart';
-import 'package:docapp_pro/featuers/loginscreen/ui/widget/password_validations.dart';
 import 'package:flutter/material.dart';
-// ignore: depend_on_referenced_packages
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class EmailAndPassword extends StatefulWidget {
@@ -23,7 +21,7 @@ class _EmailAndPasswordState extends State<EmailAndPassword> {
   // bool hasMinLength = false;
 
   // late TextEditingController passwordController;
-  @override
+  // @override
   // void initState() {
   //   super.initState();
   //   passwordController = context.read<LoginCubit>().passwordController;
