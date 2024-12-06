@@ -23,19 +23,19 @@ class DioFactory {
     }
   }
 
-  // static void addDioHeaders() async {
+  static void addDioHeaders() async {
+    // dio?.options.headers = {
+    //   'Accept': 'application/json',
+    //   'Authorization':
+    //       'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzMxMzY0NzMyLCJleHAiOjE3MzE0NTExMzIsIm5iZiI6MTczMTM2NDczMiwianRpIjoicUpzZFpyZjdocXF2Y2Y4UyIsInN1YiI6IjI3MDgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.j1gO7D2DOPVWZkelHywEkMrT-Xvb4WkoLck9DYMbGhE',
+    // };
+  }
+
+  // static void setTokenIntoHeaderAfterLogin(String token) {
   //   dio?.options.headers = {
-  //     'Accept': 'application/json',
-  //     'Authorization':
-  //         'Bearer ${await SharedPrefHelper.getSecuredString(SharedPrefKeys.userToken)}',
+  //     'Authorization': 'Bearer $token',
   //   };
   // }
-
-  static void setTokenIntoHeaderAfterLogin(String token) {
-    dio?.options.headers = {
-      'Authorization': 'Bearer $token',
-    };
-  }
 
   static void addDioInterceptor() {
     dio?.interceptors.add(
@@ -43,6 +43,8 @@ class DioFactory {
         requestBody: true,
         requestHeader: true,
         responseHeader: true,
+        error: true,
+        responseBody: true,
       ),
     );
   }

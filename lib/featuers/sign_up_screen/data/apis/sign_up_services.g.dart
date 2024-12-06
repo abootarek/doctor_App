@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'home_apis_services.dart';
+part of 'sign_up_services.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,8 +8,8 @@ part of 'home_apis_services.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element
 
-class _HomeApisServices implements HomeApisServices {
-  _HomeApisServices(
+class _SignUpServices implements SignUpServices {
+  _SignUpServices(
     this._dio, {
     this.baseUrl,
     this.errorLogger,
@@ -24,20 +24,20 @@ class _HomeApisServices implements HomeApisServices {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<SpecializitionsResponseModel> getSpecializitions(String token) async {
+  Future<SignupResponse> signup(SignUpRequestBody signupRequestBody) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{r'Authorization': token};
-    _headers.removeWhere((k, v) => v == null);
-    const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<SpecializitionsResponseModel>(Options(
-      method: 'GET',
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(signupRequestBody.toJson());
+    final _options = _setStreamType<SignupResponse>(Options(
+      method: 'POST',
       headers: _headers,
       extra: _extra,
     )
         .compose(
           _dio.options,
-          'home/index',
+          'auth/register',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -47,9 +47,9 @@ class _HomeApisServices implements HomeApisServices {
           baseUrl,
         )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late SpecializitionsResponseModel _value;
+    late SignupResponse _value;
     try {
-      _value = SpecializitionsResponseModel.fromJson(_result.data!);
+      _value = SignupResponse.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

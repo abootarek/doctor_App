@@ -6,9 +6,9 @@ part 'specializitions_response_model.g.dart';
 
 @JsonSerializable()
 class SpecializitionsResponseModel {
-  String  ? message;
+  String? message;
   @JsonKey(name: 'data')
-  List<SpecializitionsData>? specializitionsDataList;
+  List<SpecializitionsData?>? specializitionsDataList;
   SpecializitionsResponseModel({
     this.message,
     this.specializitionsDataList,
@@ -19,9 +19,8 @@ class SpecializitionsResponseModel {
 }
 
 @JsonSerializable()
-
 class SpecializitionsData {
-  @JsonKey(name: 'id')
+  // @JsonKey(name: 'id')
   int? id;
   String? name;
   @JsonKey(name: 'doctors')
@@ -31,7 +30,6 @@ class SpecializitionsData {
     this.name,
     this.doctorsList,
   });
-
   factory SpecializitionsData.fromJson(Map<String, dynamic> json) =>
       _$SpecializitionsDataFromJson(json);
 }

@@ -11,7 +11,9 @@ SpecializitionsResponseModel _$SpecializitionsResponseModelFromJson(
     SpecializitionsResponseModel(
       message: json['message'] as String?,
       specializitionsDataList: (json['data'] as List<dynamic>?)
-          ?.map((e) => SpecializitionsData.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => e == null
+              ? null
+              : SpecializitionsData.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
