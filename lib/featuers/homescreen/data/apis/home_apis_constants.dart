@@ -1,4 +1,4 @@
 class HomeApisConstants {
-    static const String specalizationEd = "specialization/index";
-
+  // specalizationEndPoint => specalizationEd
+  static const String specalizationEd = "home/index";
 }

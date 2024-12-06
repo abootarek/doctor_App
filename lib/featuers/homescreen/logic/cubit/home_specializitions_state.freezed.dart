@@ -118,19 +118,12 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
+class _$InitialImpl implements _Initial {
   const _$InitialImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'HomeSpecializitionsState.initial()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-        .add(DiagnosticsProperty('type', 'HomeSpecializitionsState.initial'));
   }
 
   @override
@@ -252,21 +245,12 @@ class __$$SpecializitionsLoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SpecializitionsLoadingImpl
-    with DiagnosticableTreeMixin
-    implements SpecializitionsLoading {
+class _$SpecializitionsLoadingImpl implements SpecializitionsLoading {
   const _$SpecializitionsLoadingImpl();
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'HomeSpecializitionsState.specializitionsloading()';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty(
-        'type', 'HomeSpecializitionsState.specializitionsloading'));
   }
 
   @override
@@ -403,9 +387,7 @@ class __$$SpecializitionsSuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SpecializitionsSuccessImpl
-    with DiagnosticableTreeMixin
-    implements SpecializitionsSuccess {
+class _$SpecializitionsSuccessImpl implements SpecializitionsSuccess {
   const _$SpecializitionsSuccessImpl(this.specializitionsResponsemodel);
 
 //  modelهباصي ال
@@ -413,18 +395,8 @@ class _$SpecializitionsSuccessImpl
   final SpecializitionsResponseModel specializitionsResponsemodel;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'HomeSpecializitionsState.specializitionssuccess(specializitionsResponsemodel: $specializitionsResponsemodel)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'HomeSpecializitionsState.specializitionssuccess'))
-      ..add(DiagnosticsProperty(
-          'specializitionsResponsemodel', specializitionsResponsemodel));
   }
 
   @override
@@ -583,26 +555,15 @@ class __$$SpecializitionsErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SpecializitionsErrorImpl
-    with DiagnosticableTreeMixin
-    implements SpecializitionsError {
+class _$SpecializitionsErrorImpl implements SpecializitionsError {
   const _$SpecializitionsErrorImpl(this.errorhandler);
 
   @override
   final ErrorHandler errorhandler;
 
   @override
-  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+  String toString() {
     return 'HomeSpecializitionsState.specializitionserror(errorhandler: $errorhandler)';
-  }
-
-  @override
-  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-    super.debugFillProperties(properties);
-    properties
-      ..add(DiagnosticsProperty(
-          'type', 'HomeSpecializitionsState.specializitionserror'))
-      ..add(DiagnosticsProperty('errorhandler', errorhandler));
   }
 
   @override

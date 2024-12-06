@@ -1,5 +1,4 @@
 import 'package:docapp_pro/core/networking/api_error_handler.dart';
-import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../data/models/specializitions_response_model.dart';

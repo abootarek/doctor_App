@@ -1,12 +1,15 @@
-import 'package:docapp_pro/core/theming/colors.dart';
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../core/helper/sixbox.dart';
-import '../../../../core/theming/style.dart';
+import 'package:docapp_pro/featuers/homescreen/data/models/specializitions_response_model.dart';
+import 'home_doctors_speciality_list_view_item.dart';
 
 class HomeDoctorSpecialityListView extends StatelessWidget {
-  const HomeDoctorSpecialityListView({super.key});
+  final List<SpecializitionsData?> specializitionsDataList;
+  const HomeDoctorSpecialityListView({
+    super.key,
+    required this.specializitionsDataList,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -14,26 +17,11 @@ class HomeDoctorSpecialityListView extends StatelessWidget {
       height: 100.h,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemCount: 5,
+        itemCount: specializitionsDataList.length,
         itemBuilder: (context, index) {
-          return Padding(
-            padding: EdgeInsetsDirectional.only(
-              start: index == 0 ? 0 : 24.w,
-            ),
-            child: Column(
-              children: [
-                CircleAvatar(
-                  radius: 30.r,
-                  backgroundColor: ColorsApp.transparent,
-                  child: Image.asset('assets/images/General.png'),
-                ),
-                virticalspace(6),
-                Text(
-                  'General ${index + 1}',
-                  style: TextStyles.font12mainblack,
-                ),
-              ],
-            ),
+          return DoctorsSpecialityItem(
+            specializitionsData: specializitionsDataList[index],
+            itemIndex: index,
           );
         },
       ),
