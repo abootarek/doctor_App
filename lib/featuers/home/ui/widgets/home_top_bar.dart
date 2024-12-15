@@ -1,3 +1,4 @@
+import 'package:docapp_pro/core/cache/shiledperfrinse.dart';
 import 'package:docapp_pro/core/helper/sixbox.dart';
 import 'package:docapp_pro/core/theming/colors.dart';
 import 'package:docapp_pro/core/theming/style.dart';
@@ -16,7 +17,7 @@ class HomeTopBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Hi, Abdelrahman!",
+              "Hi, ${SharedPrefHelper.getData(key: 'name')}",
               style: TextStyles.font13black,
             ),
             virticalspace(2.h),
