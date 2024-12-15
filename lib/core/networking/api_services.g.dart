@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'home_apis_services.dart';
+part of 'api_services.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,8 +8,8 @@ part of 'home_apis_services.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element
 
-class _HomeApisServices implements HomeApisServices {
-  _HomeApisServices(
+class _ApiService implements ApiService {
+  _ApiService(
     this._dio, {
     this.baseUrl,
     this.errorLogger,
@@ -24,20 +24,20 @@ class _HomeApisServices implements HomeApisServices {
   final ParseErrorLogger? errorLogger;
 
   @override
-  Future<SpecializitionsResponseModel> getSpecializitions(String token) async {
+  Future<SpecializationResponseModel> getSpecializations(String token) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{r'Authorization': token};
     _headers.removeWhere((k, v) => v == null);
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<SpecializitionsResponseModel>(Options(
+    final _options = _setStreamType<SpecializationResponseModel>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
     )
         .compose(
           _dio.options,
-          'home/index',
+          'specialization/index',
           queryParameters: queryParameters,
           data: _data,
         )
@@ -47,9 +47,9 @@ class _HomeApisServices implements HomeApisServices {
           baseUrl,
         )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late SpecializitionsResponseModel _value;
+    late SpecializationResponseModel _value;
     try {
-      _value = SpecializitionsResponseModel.fromJson(_result.data!);
+      _value = SpecializationResponseModel.fromJson(_result.data!);
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

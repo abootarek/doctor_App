@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:docapp_pro/core/networking/api_factory.dart';
-import 'package:docapp_pro/featuers/homescreen/data/apis/home_apis_services.dart';
-import 'package:docapp_pro/featuers/homescreen/data/repo/home_speclializitions_repo.dart';
+import 'package:docapp_pro/core/networking/api_services.dart';
+import 'package:docapp_pro/featuers/home/data/repo/home_repo.dart';
 import 'package:docapp_pro/featuers/loginscreen/data/apis/login_services.dart';
 import 'package:docapp_pro/featuers/loginscreen/data/repos/login_repo.dart';
 import 'package:docapp_pro/featuers/sign_up_screen/data/apis/sign_up_services.dart';
@@ -24,8 +24,7 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
 
   // Home
-  getIt.registerLazySingleton<HomeApisServices>(() => HomeApisServices(dio));
+  getIt.registerLazySingleton<ApiService>(() => ApiService(dio));
 
-  getIt.registerLazySingleton<HomeSpeclializitionsRepo>(
-      () => HomeSpeclializitionsRepo(getIt()));
+  getIt.registerLazySingleton<HomeRepo>(() => HomeRepo(getIt()));
 }

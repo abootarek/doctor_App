@@ -15,7 +15,7 @@ class DioFactory {
       dio!
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut;
-      // addDioHeaders();
+      addDioHeaders();
       addDioInterceptor();
       return dio!;
     } else {
@@ -24,11 +24,11 @@ class DioFactory {
   }
 
   static void addDioHeaders() async {
-    // dio?.options.headers = {
-    //   'Accept': 'application/json',
-    //   'Authorization':
-    //       'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzMxMzY0NzMyLCJleHAiOjE3MzE0NTExMzIsIm5iZiI6MTczMTM2NDczMiwianRpIjoicUpzZFpyZjdocXF2Y2Y4UyIsInN1YiI6IjI3MDgiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.j1gO7D2DOPVWZkelHywEkMrT-Xvb4WkoLck9DYMbGhE',
-    // };
+    dio?.options.headers = {
+      'Accept': 'application/json',
+      'Authorization':
+          'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL3ZjYXJlLmludGVncmF0aW9uMjUuY29tL2FwaS9hdXRoL2xvZ2luIiwiaWF0IjoxNzMzNjExNzM4LCJleHAiOjE3MzM2OTgxMzgsIm5iZiI6MTczMzYxMTczOCwianRpIjoialVzVWxpT255Sk1WTGZOZyIsInN1YiI6IjI1OTYiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.st19hty3jUbWOkUFS63Q7QARgoeOaCc-WZPUfzV1-bo',
+    };
   }
 
   // static void setTokenIntoHeaderAfterLogin(String token) {

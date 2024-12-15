@@ -1,6 +1,7 @@
+import 'package:dio/dio.dart';
+
 import 'api_constants.dart';
 import 'api_error_model.dart';
-import 'package:dio/dio.dart';
 
 // TODO: wallahy I will refactor this .. Omar Ahmed
 enum DataSource {
@@ -119,15 +120,15 @@ extension DataSourceExtension on DataSource {
 }
 
 class ErrorHandler implements Exception {
-  late ApiErrorModel failure;
+  late ApiErrorModel apiErrorModel;
 
   ErrorHandler.handle(dynamic error) {
     if (error is DioException) {
       // dio error so its an error from response of the API or from dio itself
-      failure = _handleError(error);
+      apiErrorModel = _handleError(error);
     } else {
       // default error
-      failure = DataSource.DEFAULT.getFailure();
+      apiErrorModel = DataSource.DEFAULT.getFailure();
     }
   }
 }
@@ -170,6 +171,4 @@ ApiErrorModel _handleError(DioException error) {
 class ApiInternalStatus {
   static const int SUCCESS = 0;
   static const int FAILURE = 1;
-
-  static const int SUCCESS_CODE = 200;
 }
