@@ -1,0 +1,2 @@
+D:/parmagaaa/project flutter/Doctor_App/android/app/.cxx/Debug/4v6k5x3y/armeabi-v7a/CMakeFiles/edit_cache.dir
+D:/parmagaaa/project flutter/Doctor_App/android/app/.cxx/Debug/4v6k5x3y/armeabi-v7a/CMakeFiles/rebuild_cache.dir

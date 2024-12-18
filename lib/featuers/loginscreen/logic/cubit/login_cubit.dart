@@ -1,5 +1,6 @@
 // ignore: depend_on_referenced_packages
 import 'package:bloc/bloc.dart';
+import 'package:docapp_pro/core/cache/key_values.dart';
 import 'package:docapp_pro/core/cache/shiledperfrinse.dart';
 import 'package:docapp_pro/featuers/loginscreen/data/models/login_request_body.dart';
 import 'package:docapp_pro/featuers/loginscreen/data/repos/login_repo.dart';
@@ -23,7 +24,10 @@ class LoginCubit extends Cubit<LoginState> {
     ));
     response.when(success: (loginResponse) {
       SharedPrefHelper.saveData(
-          key: 'token', value: loginResponse.userData!.token);
+          key: KeyValues.token, value: loginResponse.userData!.token);
+      SharedPrefHelper.saveData(
+          key: KeyValues.userName, value: loginResponse.userData!.userName);
+
       SharedPrefHelper.saveData(
           key: 'message', value: loginResponse.message.toString());
       emit(LoginState.success(loginResponse));

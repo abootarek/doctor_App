@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:docapp_pro/core/networking/api_factory.dart';
-import 'package:docapp_pro/core/networking/api_services.dart';
+import 'package:docapp_pro/featuers/home/data/apis/home_services_api.dart';
 import 'package:docapp_pro/featuers/home/data/repo/home_repo.dart';
 import 'package:docapp_pro/featuers/loginscreen/data/apis/login_services.dart';
 import 'package:docapp_pro/featuers/loginscreen/data/repos/login_repo.dart';

@@ -1,7 +1,7 @@
 class ConstansApi {
   static const String apiBaseUrl = "https://vcare.integration25.com/api/";
 
-static const String specialization = "specialization/index";}
+}
 
 class ApiErrors {
   static const String badRequestError = "badRequestError";

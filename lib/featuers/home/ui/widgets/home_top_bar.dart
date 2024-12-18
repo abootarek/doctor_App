@@ -1,13 +1,14 @@
+import 'package:docapp_pro/core/cache/key_values.dart';
 import 'package:docapp_pro/core/cache/shiledperfrinse.dart';
 import 'package:docapp_pro/core/helper/sixbox.dart';
 import 'package:docapp_pro/core/theming/colors.dart';
 import 'package:docapp_pro/core/theming/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class HomeTopBar extends StatelessWidget {
-  const HomeTopBar({super.key});
+  HomeTopBar({super.key});
+  final imageUrl = SharedPrefHelper.getData(key: KeyValues.photo);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class HomeTopBar extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Hi, ${SharedPrefHelper.getData(key: 'name')}",
+              "Hi, ${SharedPrefHelper.getData(key: KeyValues.userName)}",
               style: TextStyles.font13black,
             ),
             virticalspace(2.h),
@@ -27,11 +28,17 @@ class HomeTopBar extends StatelessWidget {
             ),
           ],
         ),
-        const Spacer(),
+        Spacer(),
         CircleAvatar(
-          backgroundColor: ColorsApp.lightgray,
-          radius: 24.r,
-          child: SvgPicture.asset("assets/images/BanierHomeScreen.png"),
+          foregroundColor: ColorsApp.mainblue,
+          radius: 22.r,
+          backgroundColor: ColorsApp.white,
+          child: imageUrl == null
+              ? Icon(
+                  Icons.person,
+                  color: ColorsApp.mainblue,
+                )
+              : Image.network(imageUrl),
         )
       ],
     );

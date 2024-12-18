@@ -22,7 +22,7 @@ class HomeContainerBlue extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(24.r),
               image: const DecorationImage(
-                  image: AssetImage("assets/images/home_container_doctor.png"),
+                  image: AssetImage("assets/images/BanierHomeScreen.png"),
                   fit: BoxFit.cover),
             ),
             child: Column(
@@ -30,7 +30,7 @@ class HomeContainerBlue extends StatelessWidget {
               children: [
                 Text(
                   "Book and\nschedule with\nnearest doctor",
-                  style: TextStyles.font18Black700Wight,
+                  style: TextStyles.font18whitemedium,
                 ),
                 virticalspace(16.h),
                 Expanded(
@@ -43,7 +43,7 @@ class HomeContainerBlue extends StatelessWidget {
                         )),
                     child: Text(
                       "Find Nearby",
-                      style: TextStyles.font12mainblack,
+                      style: TextStyles.font13black,
                     ),
                   ),
                 ),
@@ -54,7 +54,7 @@ class HomeContainerBlue extends StatelessWidget {
               top: 0,
               right: 3.w,
               child: Image.asset(
-                "assets/images/home_doctor.png",
+                "assets/images/image_Doctor.png",
                 height: 220.h,
               )),
         ],

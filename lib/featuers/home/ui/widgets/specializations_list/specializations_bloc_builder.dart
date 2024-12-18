@@ -1,7 +1,6 @@
-
 import 'package:docapp_pro/featuers/home/logic/home_cubit.dart';
 import 'package:docapp_pro/featuers/home/logic/home_state.dart';
-import 'package:docapp_pro/featuers/home/ui/widgets/doctor_speciality_list_view.dart';
+import 'package:docapp_pro/featuers/home/ui/widgets/specializations_list/doctor_speciality_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,10 +19,11 @@ class SpecializationsBlocBuilder extends StatelessWidget {
         return state.maybeWhen(
           specializationsSuccess: (specializationResponseModel) {
             var specializationDataList =
-                specializationResponseModel?.specializationDataList;
+                specializationResponseModel.specializationDataList;
             return SpecialityListView(
               specializationDataList: specializationDataList ?? [],
             );
+            
           },
           specializationsError: (errorHandler) {
             return Container(

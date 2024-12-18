@@ -1,8 +1,7 @@
-import 'dart:math';
-
 import 'package:docapp_pro/core/networking/api_error_handler.dart';
 import 'package:docapp_pro/core/networking/api_result.dart';
-import 'package:docapp_pro/core/networking/api_services.dart';
+import 'package:docapp_pro/featuers/home/data/apis/home_services_api.dart'
+    show ApiService;
 import 'package:docapp_pro/featuers/home/data/models/specializations_response_model.dart';
 
 class HomeRepo {
