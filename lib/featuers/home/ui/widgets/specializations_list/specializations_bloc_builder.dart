@@ -18,12 +18,11 @@ class SpecializationsBlocBuilder extends StatelessWidget {
       builder: (context, state) {
         return state.maybeWhen(
           specializationsSuccess: (specializationResponseModel) {
-            var specializationDataList =
+            var specializationList =
                 specializationResponseModel.specializationDataList;
             return SpecialityListView(
-              specializationDataList: specializationDataList ?? [],
+              specializationDataList: specializationList ?? [],
             );
-            
           },
           specializationsError: (errorHandler) {
             return Container(

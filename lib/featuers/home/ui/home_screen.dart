@@ -1,11 +1,5 @@
-import 'package:docapp_pro/core/cache/key_values.dart';
-import 'package:docapp_pro/core/cache/shiledperfrinse.dart';
-import 'package:docapp_pro/core/helper/extintion.dart';
 import 'package:docapp_pro/core/helper/sixbox.dart';
-import 'package:docapp_pro/core/routing/routs.dart';
-import 'package:docapp_pro/core/theming/style.dart';
-import 'package:docapp_pro/core/widget/app_text_button.dart';
-import 'package:docapp_pro/featuers/home/ui/widgets/doctor/doctors_list_view.dart';
+import 'package:docapp_pro/featuers/home/ui/widgets/doctor/doctors_bloc_builder.dart';
 import 'package:docapp_pro/featuers/home/ui/widgets/specializations_list/specializations_bloc_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -27,15 +21,6 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               // Text('${SharedPrefHelper.getData(key: 'message')}'),
-              // AppTextButton(
-              //   buttonText: 'LogOut',
-              //   textStyle: TextStyles.font16white,
-              //   onPressed: () {
-              //     SharedPrefHelper.removeData(key: KeyValues.token);
-              //     context.pushNamedAndRemoveUntil(Routes.loginscreen,
-              //         predicate: (route) => false);
-              //   },
-              // ),
               HomeTopBar(),
               const HomeContainerBlue(),
               virticalspace(24.h),

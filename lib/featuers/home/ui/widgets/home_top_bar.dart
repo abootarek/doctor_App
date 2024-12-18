@@ -1,6 +1,8 @@
 import 'package:docapp_pro/core/cache/key_values.dart';
 import 'package:docapp_pro/core/cache/shiledperfrinse.dart';
+import 'package:docapp_pro/core/helper/extintion.dart';
 import 'package:docapp_pro/core/helper/sixbox.dart';
+import 'package:docapp_pro/core/routing/routs.dart';
 import 'package:docapp_pro/core/theming/colors.dart';
 import 'package:docapp_pro/core/theming/style.dart';
 import 'package:flutter/material.dart';
@@ -29,16 +31,21 @@ class HomeTopBar extends StatelessWidget {
           ],
         ),
         Spacer(),
-        CircleAvatar(
-          foregroundColor: ColorsApp.mainblue,
-          radius: 22.r,
-          backgroundColor: ColorsApp.white,
-          child: imageUrl == null
-              ? Icon(
-                  Icons.person,
-                  color: ColorsApp.mainblue,
-                )
-              : Image.network(imageUrl),
+        GestureDetector(
+          onTap: () {
+            context.pushNamed(Routes.profileScreen);
+          },
+          child: CircleAvatar(
+            foregroundColor: ColorsApp.mainblue,
+            radius: 22.r,
+            backgroundColor: ColorsApp.white,
+            child: imageUrl == null
+                ? Icon(
+                    Icons.person,
+                    color: ColorsApp.mainblue,
+                  )
+                : Image.network(imageUrl),
+          ),
         )
       ],
     );
