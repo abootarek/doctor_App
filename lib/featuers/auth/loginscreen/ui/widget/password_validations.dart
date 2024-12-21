@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:docapp_pro/core/helper/sixbox.dart';
 import 'package:docapp_pro/core/theming/colors.dart';
 import 'package:docapp_pro/core/theming/style.dart';
@@ -25,13 +24,13 @@ class PasswordValidations extends StatelessWidget {
     return Column(
       children: [
         buildValidationRow(' At Least 1 lowercase letter', hasLowerCase),
-        virticalspace(2),
+        verticalSpace(2),
         buildValidationRow('At Least 1 UpperCase letter', hasUpperCase),
-        virticalspace(2),
+        verticalSpace(2),
         buildValidationRow('At Least 1 Number letter', hasNumber),
-        virticalspace(2),
+        verticalSpace(2),
         buildValidationRow('At Least 8 MinLength letter', hasMinLength),
-        virticalspace(2),
+        verticalSpace(2),
         buildValidationRow('At Least 1 SpecialChar letter', hasSpecialChar),
       ],
     );
@@ -44,7 +43,7 @@ class PasswordValidations extends StatelessWidget {
           radius: 2.5.r,
           backgroundColor: ColorsApp.gray,
         ),
-        horixontalspace(6),
+        horizontalSpace(6),
         Text(
           text,
           style: TextStyles.font12mainblue.copyWith(

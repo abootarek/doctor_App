@@ -31,7 +31,7 @@ class _SignUpFormState extends State<SignUpForm> {
             },
             controller: context.read<SignupCubit>().nameController,
           ),
-          virticalspace(18),
+          verticalSpace(18),
           AppTextFormField(
             hinttext: "Phone Number",
             validator: (value) {
@@ -43,7 +43,7 @@ class _SignUpFormState extends State<SignUpForm> {
             },
             controller: context.read<SignupCubit>().phoneController,
           ),
-          virticalspace(18),
+          verticalSpace(18),
           AppTextFormField(
             hinttext: 'Email',
             validator: (value) {
@@ -55,7 +55,7 @@ class _SignUpFormState extends State<SignUpForm> {
             },
             controller: context.read<SignupCubit>().emailController,
           ),
-          virticalspace(18),
+          verticalSpace(18),
           AppTextFormField(
             hinttext: "Password",
             isObscureText: isPasswordObscureText,
@@ -82,7 +82,7 @@ class _SignUpFormState extends State<SignUpForm> {
             },
             controller: context.read<SignupCubit>().passwordController,
           ),
-          virticalspace(18),
+          verticalSpace(18),
           AppTextFormField(
             controller: context.read<SignupCubit>().confirmPasswordController,
             hinttext: 'Password Confirmation',
@@ -106,7 +106,7 @@ class _SignUpFormState extends State<SignUpForm> {
               }
             },
           ),
-          virticalspace(18),
+          verticalSpace(18),
         ],
       ),
     );

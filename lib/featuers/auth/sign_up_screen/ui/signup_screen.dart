@@ -28,9 +28,9 @@ class SignUpScreen extends StatelessWidget {
           child: Column(
             children: [
               const TextCreateAcount(),
-              virticalspace(36),
+              verticalSpace(36),
               const SignUpForm(),
-              virticalspace(18),
+              verticalSpace(18),
               AppTextButton(
                 buttonText: 'Create Account',
                 onPressed: () {
@@ -38,14 +38,14 @@ class SignUpScreen extends StatelessWidget {
                 },
                 textStyle: TextStyles.font16white,
               ),
-              virticalspace(18),
-              virticalspace(18),
+              verticalSpace(18),
+              verticalSpace(18),
               const TextDividerLogin(),
-              virticalspace(32),
+              verticalSpace(32),
               const SocialNetworkingSignUp(),
-              virticalspace(32),
+              verticalSpace(32),
               const RichTextComponantSignUp(),
-              virticalspace(32),
+              verticalSpace(32),
               const TextAndButtonSignUp(),
               const SignUpBlocListener(),
             ],

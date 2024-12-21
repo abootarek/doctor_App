@@ -21,3 +21,7 @@ extension Navigation on BuildContext {
     Navigator.of(this).pop();
   }
 }
+
+extension ListExtension<T> on List<T>? {
+  bool isEmptyOrNull() => this == null || this!.isEmpty;
+}

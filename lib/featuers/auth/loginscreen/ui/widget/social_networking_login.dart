@@ -20,12 +20,12 @@ class SocialNetworkingLogin extends StatelessWidget {
             'assets/images/Login_google.png',
           ),
         ),
-        horixontalspace(32),
+        horizontalSpace(32),
         CircleAvatar(
           backgroundColor: ColorsApp.transparent,
           child: Image.asset('assets/images/Login facebook.png'),
         ),
-        horixontalspace(32),
+        horizontalSpace(32),
         CircleAvatar(
           backgroundColor: ColorsApp.transparent,
           child: Image.asset('assets/images/Login IOS.png'),

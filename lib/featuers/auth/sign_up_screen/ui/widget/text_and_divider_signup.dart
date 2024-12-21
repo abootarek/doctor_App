@@ -16,12 +16,12 @@ class TextDividerLogin extends StatelessWidget {
             thickness: 1,
           ),
         ),
-        horixontalspace(5),
+        horizontalSpace(5),
         Text(
           'Or sign in with',
           style: TextStyles.font13gray,
         ),
-        horixontalspace(5),
+        horizontalSpace(5),
         const Expanded(
           child: Divider(
             thickness: 1,

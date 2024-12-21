@@ -23,7 +23,7 @@ class HomeTopBar extends StatelessWidget {
               "Hi, ${SharedPrefHelper.getData(key: KeyValues.userName)}",
               style: TextStyles.font13black,
             ),
-            virticalspace(2.h),
+            verticalSpace(2.h),
             Text(
               "How Are you Today?",
               style: TextStyles.font12grey,

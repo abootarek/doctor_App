@@ -6,6 +6,7 @@ import 'package:docapp_pro/featuers/auth/loginscreen/logic/cubit/login_cubit.dar
 import 'package:docapp_pro/featuers/auth/loginscreen/logic/cubit/login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class LoginBlocListener extends StatelessWidget {
   const LoginBlocListener({super.key});
@@ -21,7 +22,8 @@ class LoginBlocListener extends StatelessWidget {
             showDialog(
               context: context,
               builder: (context) => Center(
-                child: CircularProgressIndicator(
+                child: LoadingAnimationWidget.newtonCradle(
+                  size: 150,
                   color: ColorsApp.mainblue,
                 ),
               ),

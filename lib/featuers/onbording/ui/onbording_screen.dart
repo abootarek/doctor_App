@@ -24,7 +24,7 @@ class OnbordingScreen extends StatelessWidget {
           child: Column(
             children: [
               const DocLogoAndName(),
-              virticalspace(41),
+              verticalSpace(41),
               const DocImageAndName(),
               Padding(
                 padding: EdgeInsets.symmetric(
@@ -38,7 +38,7 @@ class OnbordingScreen extends StatelessWidget {
                       style: TextStyles.font13gray,
                       textAlign: TextAlign.center,
                     ),
-                    virticalspace(30),
+                    verticalSpace(30),
                     const GetStartedButton(),
                   ],
                 ),

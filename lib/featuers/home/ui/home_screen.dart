@@ -1,5 +1,6 @@
 import 'package:docapp_pro/core/helper/sixbox.dart';
-import 'package:docapp_pro/featuers/home/ui/widgets/doctor/doctors_bloc_builder.dart';
+import 'package:docapp_pro/featuers/home/ui/widgets/doctors_list/doctros_bloc_builder.dart'
+    show DoctorsBlocBuilder;
 import 'package:docapp_pro/featuers/home/ui/widgets/specializations_list/specializations_bloc_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -23,15 +24,15 @@ class HomeScreen extends StatelessWidget {
               // Text('${SharedPrefHelper.getData(key: 'message')}'),
               HomeTopBar(),
               const HomeContainerBlue(),
-              virticalspace(24.h),
+              verticalSpace(24.h),
               const DoctorSpecialitySeeAll(),
-              virticalspace(16.h),
+              verticalSpace(16.h),
               Expanded(
                 child: Column(
                   children: [
                     const SpecializationsBlocBuilder(),
-                    virticalspace(16.h),
-                    const DoctorsListView(),
+                    verticalSpace(16.h),
+                    const DoctorsBlocBuilder(),
                   ],
                 ),
               ),

@@ -31,7 +31,7 @@ class HomeContainerBlue extends StatelessWidget {
                   "Book and\nschedule with\nnearest doctor",
                   style: TextStyles.font18whitemedium,
                 ),
-                virticalspace(16.h),
+                verticalSpace(16.h),
                 Expanded(
                   child: ElevatedButton(
                     onPressed: () {},
